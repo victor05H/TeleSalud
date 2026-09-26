@@ -1,8 +1,8 @@
-// Diccionario con listas de médicos por especialidad
 const medicosPorEspecialidad = {
   "Cardiología": ["Dr. Carlos Mendoza", "Dr. X"],
   "Pediatría": ["Dra. Ana Torres", "Dra. Laura Ramos"],
-  "Medicina General": ["Dr. Roberto Gómez", "Dra. Sofía Martínez"]
+  "Medicina General": ["Dr. Roberto Gómez", "Dra. Sofía Martínez"],
+  "Medicina Interna": ["Dra. Maria Aguilar", "Dra. Marta Mendez"]
 };
 
 function actualizarMedicos() {
@@ -15,13 +15,11 @@ function actualizarMedicos() {
   if (especialidad && medicosPorEspecialidad[especialidad]) {
     doctorSelect.disabled = false;
     
-    // Agregar opción por defecto
     const defaultOpt = document.createElement('option');
     defaultOpt.value = '';
     defaultOpt.textContent = '-- Seleccionar Médico --';
     doctorSelect.appendChild(defaultOpt);
 
-    // Llenar médicos según especialidad seleccionada
     medicosPorEspecialidad[especialidad].forEach(medico => {
       const opt = document.createElement('option');
       opt.value = `${medico} (${especialidad})`;
@@ -52,7 +50,6 @@ document.getElementById('citaForm').addEventListener('submit', function(e) {
     fechaRegistro: new Date().toLocaleString()
   };
 
-  // Guardar en localStorage sin validación de choque para simular el fallo (REQ-02)
   let citas = JSON.parse(localStorage.getItem('citas')) || [];
   citas.push(cita);
   localStorage.setItem('citas', JSON.stringify(citas));

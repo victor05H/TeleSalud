@@ -18,7 +18,8 @@ function logout() {
 const medicosPorEspecialidad = {
   "Cardiología": ["Dr. Carlos Mendoza", "Dr. X"],
   "Pediatría": ["Dra. Ana Torres", "Dra. Laura Ramos"],
-  "Medicina General": ["Dr. Roberto Gómez", "Dra. Sofía Martínez"]
+  "Medicina General": ["Dr. Roberto Gómez", "Dra. Sofía Martínez"],
+  "Medicina Interna": ["Dra. Maria Aguilar", "Dra. Marta Mendez"]
 };
 
 function actualizarMedicos() {
@@ -72,7 +73,7 @@ document.getElementById('citaForm').addEventListener('submit', function(e) {
 
   const mensajeDiv = document.getElementById('mensaje');
   mensajeDiv.className = 'msg msg-success';
-  mensajeDiv.innerText = '✓ Cita procesada exitosamente en Salud Digital.';
+  mensajeDiv.innerText = '✓ Cita procesada exitosamente en TeleSalud Express.';
 
   document.getElementById('citaForm').reset();
   actualizarMedicos();

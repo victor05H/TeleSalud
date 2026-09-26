@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Salud Digital - Panel de Citas</title>
+  <title>TeleSalud Express - Panel de Citas</title>
   <link rel="stylesheet" href="../css/ver_citas.css">
 </head>
 <body>
@@ -20,14 +20,8 @@
 
   <div class="container">
     <div class="header">
-      <h2>Salud Digital</h2>
+      <h2>TeleSalud Express</h2>
       <p>Panel de Control y Verificación de Citas (Módulo Administrador)</p>
-    </div>
-
-    <!-- Alerta de Choque de Horarios -->
-    <div id="alertError" class="alert-error">
-      <h4>⚠️ DEFECTO DETECTADO</h4>
-      <p>Se detectó choque de horarios: Existen dos o más citas reservadas al mismo tiempo para el mismo médico[cite: 1].</p>
     </div>
 
     <div class="table-responsive">
@@ -40,11 +34,10 @@
             <th>Médico</th>
             <th>Fecha y Hora</th>
             <th>Motivo</th>
-            <th>Estado</th>
           </tr>
         </thead>
         <tbody>
-          <!-- Citas dinámicas -->
+          
         </tbody>
       </table>
       <div id="emptyState" class="empty-state" style="display: none;">No hay citas registradas en el sistema.</div>

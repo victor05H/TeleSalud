@@ -39,11 +39,6 @@ function cargarCitas() {
     const key = `${cita.doctor}_${cita.fechaHora}`;
     const esDuplicado = conteoHorarios[key] > 1;
 
-    if (esDuplicado) {
-      hayConflicto = true;
-      tr.classList.add('conflict-row');
-    }
-
     const fechaFormateada = cita.fechaHora.replace('T', ' ');
 
     tr.innerHTML = `
@@ -52,17 +47,10 @@ function cargarCitas() {
       <td>${cita.especialidad}</td>
       <td><strong>${cita.doctor}</strong></td>
       <td><strong>${fechaFormateada}</strong></td>
-      <td style="max-width: 160px;">${cita.motivo}</td>
-      <td>
-        ${esDuplicado 
-          ? '<span class="badge badge-error">⚠️ Doble Reserva</span>' 
-          : '<span style="color:#047857; font-weight:700;">✓ Correcto</span>'}
-      </td>
-    `;
+      <td style="max-width: 160px;">${cita.motivo}</td>`;
     tbody.appendChild(tr);
   });
 
-  alertError.style.display = hayConflicto ? 'block' : 'none';
 }
 
 function limpiarCitas() {
