@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TeleSalud Express - Agendar Cita</title>
+  <link rel="stylesheet" href="../css/agendar.css">
+</head>
+<body>
+
+  <div class="card">
+    <div class="header">
+      <h2>TeleSalud Express</h2>
+      <p>Gestión y Agendamiento de Citas Médicas</p>
+    </div>
+
+    <form id="citaForm">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="paciente">Nombre del Paciente</label>
+          <input type="text" id="paciente" placeholder="Ej. Juan Pérez" required>
+        </div>
+        <div class="form-group">
+          <label for="documento">DNI / Documento</label>
+          <input type="text" id="documento" placeholder="12345678" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo Electrónico</label>
+        <input type="email" id="email" placeholder="correo@ejemplo.com" required>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="especialidad">Especialista (Especialidad)</label>
+          <select id="especialidad" required onchange="actualizarMedicos()">
+            <option value="">-- Seleccionar --</option>
+            <option value="Cardiología">Cardiología</option>
+            <option value="Pediatría">Pediatría</option>
+            <option value="Medicina General">Medicina General</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="doctor">Médico</label>
+          <select id="doctor" required disabled>
+            <option value="">-- Elija Especialidad primero --</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="fechaHora">Fecha y Hora de la Cita</label>
+        <input type="datetime-local" id="fechaHora" required>
+      </div>
+
+      <div class="form-group">
+        <label for="motivo">Motivo de Consulta</label>
+        <textarea id="motivo" placeholder="Describa brevemente el motivo de la consulta..." required></textarea>
+      </div>
+
+      <button type="submit">Confirmar y Agendar Cita</button>
+    </form>
+
+    <div id="mensaje" class="msg"></div>
+
+    <div class="footer-link">
+      <a href="ver_citas.html">Ver Panel de Citas Agendadas &rarr;</a>
+    </div>
+  </div>
+
+  <script src="../js/agendar.js"></script>
+
+</body>
+</html>

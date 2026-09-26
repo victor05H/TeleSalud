@@ -1,0 +1,25 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background-color: #e6f7fa; display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 100vh; padding: 20px; }
+
+.logo-container { text-align: center; margin-bottom: 20px; }
+.logo-title { font-size: 28px; font-weight: 800; color: #004269; letter-spacing: -0.5px; }
+.logo-subtitle { font-size: 22px; font-weight: 700; color: #00a3e0; margin-top: -4px; }
+
+.card { background: #ffffff; padding: 35px 30px; border-radius: 12px; width: 100%; max-width: 420px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+.card h2 { color: #111; font-size: 22px; font-weight: 700; margin-bottom: 25px; }
+
+.form-group { margin-bottom: 16px; text-align: left; }
+.input-wrapper { background-color: #f2f2f2; border-radius: 6px 6px 0 0; border-bottom: 2px solid #ccc; padding: 8px 12px; display: flex; align-items: center; gap: 10px; }
+.input-wrapper:focus-within { border-bottom-color: #00a3e0; }
+.input-wrapper span { color: #555; font-size: 16px; }
+.input-content { flex: 1; }
+.input-content label { display: block; font-size: 11px; color: #666; font-weight: 600; }
+.input-content input { width: 100%; border: none; background: transparent; font-size: 15px; color: #222; outline: none; padding-top: 2px; }
+
+.btn-ingresar { width: 100%; background-color: #0a85ea; color: white; border: none; padding: 12px; font-size: 16px; font-weight: 700; border-radius: 20px; cursor: pointer; margin-top: 15px; transition: background 0.2s; }
+.btn-ingresar:hover { background-color: #0875ce; }
+
+.error-msg { background-color: #fde8e8; color: #991b1b; border: 1px solid #f8b4b4; padding: 10px; border-radius: 6px; font-size: 13px; margin-top: 15px; text-align: center; display: none; }
+
+.info-box { background-color: #0f79b9; color: white; border-radius: 10px; padding: 10px 15px; width: 100%; max-width: 420px; text-align: center; font-size: 12px; margin-top: 12px; font-weight: 600; }
+.demo-credentials { margin-top: 20px; font-size: 12px; color: #555; border-top: 1px solid #eee; padding-top: 15px; }

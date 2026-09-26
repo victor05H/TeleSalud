@@ -1,0 +1,32 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Arial, sans-serif; }
+body { background-color: #e6f7fa; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 20px; }
+
+.navbar { width: 100%; max-width: 1000px; display: flex; justify-content: space-between; align-items: center; background: #ffffff; padding: 12px 20px; border-radius: 10px; margin-bottom: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.04); }
+.user-info { font-size: 13px; color: #004269; }
+.nav-actions { display: flex; gap: 12px; align-items: center; }
+.btn-agendar-nav { background-color: #0a85ea; color: white; text-decoration: none; padding: 6px 14px; font-size: 13px; font-weight: 700; border-radius: 15px; transition: background 0.2s; }
+.btn-agendar-nav:hover { background-color: #0875ce; }
+.btn-logout { background-color: #e53e3e; color: white; border: none; padding: 6px 12px; font-size: 12px; font-weight: 700; border-radius: 15px; cursor: pointer; }
+
+.container { background: #ffffff; padding: 30px; border-radius: 12px; width: 100%; max-width: 1000px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+.header { text-align: center; margin-bottom: 20px; border-bottom: 2px solid #00a3e0; padding-bottom: 12px; }
+.header h2 { color: #004269; font-size: 22px; font-weight: 800; }
+.header p { color: #00a3e0; font-size: 14px; font-weight: 600; }
+
+.alert-error { background-color: #fef2f2; border-left: 5px solid #ef4444; color: #991b1b; padding: 15px; border-radius: 6px; margin-bottom: 20px; display: none; }
+.alert-error h4 { font-size: 14px; margin-bottom: 3px; font-weight: 700; }
+.alert-error p { font-size: 13px; color: #b91c1c; }
+
+.table-responsive { overflow-x: auto; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
+th { background-color: #004269; color: white; padding: 10px; font-weight: 700; }
+td { padding: 10px; border-bottom: 1px solid #e2e8f0; color: #333; vertical-align: top; }
+tr:hover { background-color: #f7fafc; }
+
+.badge { padding: 4px 8px; border-radius: 4px; font-size: 11px; font-weight: 700; display: inline-block; }
+.badge-error { background-color: #fee2e2; color: #991b1b; }
+tr.conflict-row { background-color: #fff1f2 !important; }
+
+.actions { display: flex; justify-content: flex-end; align-items: center; margin-top: 25px; }
+.btn-clear { background-color: #e53e3e; color: white; border: none; padding: 8px 14px; font-size: 13px; font-weight: 700; border-radius: 6px; cursor: pointer; }
+.empty-state { text-align: center; color: #718096; padding: 25px 0; font-style: italic; }
